@@ -1,0 +1,88 @@
+//Bootstrap提供的样式
+@import "bootstrap.less";
+
+/*自定义的样式*/
+body{
+  margin-top: @navbar-height;
+}
+
+.logo{
+  display: inline-block;
+  width:30px;
+  height: 35px;
+  background: url("../img/hdr.png") -60px -8px no-repeat;
+  margin-top: 10px;
+}
+
+.logo:hover{
+  background: url("../img/hdr.png") -121px -8px no-repeat;
+}
+
+.login-menu{
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+}
+
+.main{
+  background: @iphone-dark;
+  color: @text-color-light;
+  a{
+    color: @text-color-light;
+    &:hover{
+      color: @text-color-light;
+    }
+  }
+
+  .masking-parent{
+    background-color: @iphone-light;
+    position: relative;
+    .masking-text{
+      padding: 15px;
+    }
+    @media screen and (min-width: @screen-md-min){
+      .masking-text{
+        position: absolute;
+        bottom: 0px;
+      }
+    }
+  }
+
+  .masking-div-parent{
+    position: relative;
+    overflow: hidden;
+    .masking-div{
+      position: absolute;
+      top: 66%;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      padding: 10px;
+      //background: #000;
+      //opacity: .5;这样会导致所有内容都半透明
+      background: rgba(0,0,0,.5);
+    }
+    a{
+      color: #90D6F0;
+      cursor: pointer;
+      text-decoration:underline;
+    }
+  }
+}
+
+.main>.container>.row{
+  margin-bottom: 25px;
+}
+
+.media-body ul{
+  li{
+    margin: 10px 8px 10px;
+    a{
+      &:hover{
+        color: #90D6F0;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
